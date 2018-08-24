@@ -11,4 +11,8 @@ export class AppComponent {
   onPostAdded(post) {
     this.storedPosts.push(post);
   }
+
+  onPostDeleted() {
+    this.storedPosts.pop();
+  }
 }

@@ -9,6 +9,7 @@ export class  PostCreateComponent {
   enteredTitle = '';
   enteredContent = '';
   @Output() postCreated = new EventEmitter();
+  @Output() postDeleted = new EventEmitter();
 
   onAddPost() {
     const post = {
@@ -18,5 +19,9 @@ export class  PostCreateComponent {
     this.enteredTitle = '';
     this.enteredContent = '';
   };
+
+  onDeletePost() {
+    this.postDeleted.emit();
+  }
 
 }
